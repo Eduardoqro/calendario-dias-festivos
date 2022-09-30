@@ -58,15 +58,21 @@
             </div>
         </div>
     </nav>
-
-    <form>
+<h1>Calendario de Dias Festivos</h1>
+<p>Mostra a partir de una fecha númercia dd/mm/aaaa, si fue laborable(L-V) o fin de semana(S y D)</p>
+<hr>
+<div class="container border border-1 text-center my-5 bg-light">
+   <div class="row">
+    <div class="col-md-4 col-sm-4 ">
         <div class="form-group">
-            <label for="exampleFormControlInput1">Dia</label>
-            <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="24" name="day">
+            <label for="dia">Dia</label>
+            <input type="number" class="form-control" id="dia" placeholder="24">
         </div>
+    </div>
+    <div class="col-md-4 col-sm-4 ">
         <div class="form-group">
-            <label for="exampleFormControlInput2">Mes</label>
-            <select class="form-select" aria-label="Default select example" id="exampleFormControlInput2">
+            <label for="mes">Mes</label>
+            <select class="form-select" aria-label="Default select example" id="mes">
                 <option value="1">Enero</option>
                 <option value="2">Febrero</option>
                 <option value="3">Marzo</option>
@@ -81,18 +87,35 @@
                 <option value="12">Diciembre</option>
               </select>
         </div>
-        <div class="form-group">
-            <label for="exampleFormControlInput3">año</label>
-            <input type="number" class="form-control" id="exampleFormControlInput3" placeholder="2022" >
-        </div>
-    </form>
-    <button type="button" class="btn btn-danger">Calcular</button>
-    <div class="form-group">
-        <label for="exampleFormControlInput4">final</label>
-        <input type="text" class="form-control" placeholder="Martes, dia laborable" readonly id="exampleFormControlInput4"  onclick="calcularFecha()">
     </div>
-
-    <div class="d-inline p-2 text-bg-primary"  onclick="calcularFecha()">display</div>
-
+    <div class="col-md-4 col-sm-4 ">
+        <div class="form-group">
+            <label for="año">Año</label>
+            <input type="number" class="form-control" id="año" placeholder="2022" >
+        </div>
+    </div>
+   </div>
+<div class="row ">
+    <div class="col-md-4 col-sm-4"></div>
+    <div class="col-md-4 col-sm-4 ">
+        <label for="final">Realizar </label>
+        <button type="button" class="btn btn-danger"  onclick="calcularFecha()">Calcular</button>
+    </div>
+    <div class="col-md-4 col-sm-4"></div>
+</div>
+<div class="row text-center">
+    <div class="col-md-4 col-sm-4 "></div>
+    <div class="col-md-4 col-sm-4 ">
+        <div class="form-group">
+            <label for="final">Se obtuvo</label>
+            <input type="text" class="form-control" id="final"  readonly disabled>
+        </div>
+    </div>
+    <div class="col-md-4 col-sm-4 "></div>
+</div>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path fill="#198754" fill-opacity="1" d="M0,128L0,96L80,96L80,224L160,224L160,0L240,0L240,256L320,256L320,160L400,160L400,64L480,64L480,224L560,224L560,128L640,128L640,0L720,0L720,224L800,224L800,192L880,192L880,256L960,256L960,32L1040,32L1040,32L1120,32L1120,64L1200,64L1200,160L1280,160L1280,96L1360,96L1360,192L1440,192L1440,320L1360,320L1360,320L1280,320L1280,320L1200,320L1200,320L1120,320L1120,320L1040,320L1040,320L960,320L960,320L880,320L880,320L800,320L800,320L720,320L720,320L640,320L640,320L560,320L560,320L480,320L480,320L400,320L400,320L320,320L320,320L240,320L240,320L160,320L160,320L80,320L80,320L0,320L0,320Z"></path>
+  </svg>
 </body>
 </html>
